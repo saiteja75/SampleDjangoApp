@@ -2,4 +2,7 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("This is index page")
+    context = {
+        "variable": "variable sent"
+    }
+    return render(request, "index.html", context)
