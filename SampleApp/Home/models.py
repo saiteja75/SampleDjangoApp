@@ -7,3 +7,7 @@ class Contact(models.Model):
     phno = models.CharField(max_length=12)
     msg = models.TextField(max_length=256)
     datetime = models.DateTimeField()
+
+    def __str__(self):
+        return self.name
+    
